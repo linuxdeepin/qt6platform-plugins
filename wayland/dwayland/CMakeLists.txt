@@ -9,11 +9,13 @@ if(${QT_VERSION_MAJOR} STREQUAL "5")
     find_package(Qt5 REQUIRED COMPONENTS XkbCommonSupport)
 endif()
 
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(WAYLAND REQUIRED wayland-client wayland-cursor IMPORTED_TARGET)
+pkg_check_modules(X11 REQUIRED xkbcommon IMPORTED_TARGET)
+
 add_definitions(-DQT5DWAYLANDPLUGIN_LIBRARY -DQT_DEPRECATED_WARNINGS)
 
 include(${CMAKE_CURRENT_LIST_DIR}/dwayland.cmake)
-
-set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin/plugins/platforms)
 
 add_library(${PROJECT_NAME} MODULE main.cpp ${wayland_SRC})
 
@@ -42,6 +44,8 @@ PRIVATE
     Qt${QT_VERSION_MAJOR}::Core
     Qt${QT_VERSION_MAJOR}::GuiPrivate
     Qt${QT_VERSION_MAJOR}::WaylandClient
+    PkgConfig::WAYLAND
+    PkgConfig::X11
 )
 if(${QT_VERSION_MAJOR} STREQUAL "5")
     target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::XkbCommonSupportPrivate Qt5::WaylandClientPrivate)
