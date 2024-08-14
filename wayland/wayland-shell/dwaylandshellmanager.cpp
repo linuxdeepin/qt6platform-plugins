@@ -186,7 +186,7 @@ void DWaylandShellManager::sendProperty(QWaylandShellSurface *self, const QStrin
 
     if (auto *dde_shell_surface = ensureDDEShellSurface(self)) {
         if (!name.compare(noTitlebar)) {
-            qCDebug(dwlp()) << "### requestNoTitleBar" << value;
+            qCDebug(dwlp()) << "Request NoTitleBar, value: " << value;
             dde_shell_surface->requestNoTitleBarProperty(value.toBool());
         }
         if (!name.compare(windowRadius)) {
@@ -194,7 +194,7 @@ void DWaylandShellManager::sendProperty(QWaylandShellSurface *self, const QStrin
             qreal radius  = value.toInt(&ok);
             if (wlWindow->screen())
                 radius *= wlWindow->screen()->devicePixelRatio();
-            qCDebug(dwlp()) << "### requestWindowRadius" << radius << value;
+            qCDebug(dwlp()) << "Rquest window radius, value: " << radius << value;
             if (ok)
                 dde_shell_surface->requestWindowRadiusProperty({radius, radius});
             else
