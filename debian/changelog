@@ -1,3 +1,9 @@
+dde-qt6platform-plugins (6.0.34) unstable; urgency=medium
+
+  * Release 6.0.34
+
+ -- YeShanShan <yeshanshan@uniontech.com>  Thu, 17 Apr 2025 21:54:14 +0800
+
 dde-qt6platform-plugins (6.0.33) unstable; urgency=medium
 
   * sync: from linuxdeepin/qt5platform-plugins
