@@ -1,3 +1,22 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [6.0.37] - 2025-06-19
+
+### Added
+
+- Add debian check workflow
+
+### Changed
+
+- From linuxdeepin/qt5platform-plugins
+- From linuxdeepin/qt5platform-plugins
+- From linuxdeepin/qt5platform-plugins
+
 <a name="1.2.2"></a>
 ## 1.2.2 (2019-05-29)
 
