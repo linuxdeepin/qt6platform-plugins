@@ -1,6 +1,6 @@
 # Maintainer: justforlxz <justforlxz@gmail.com>
 pkgname=deepin-qt6platform-plugins-git
-pkgver=6.0.37
+pkgver=6.0.38
 pkgrel=1
 sourcename=dde-qt6platform-plugins
 sourcetars=("$sourcename"_"$pkgver".tar.xz)
